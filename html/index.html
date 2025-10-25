@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Picker</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+        }
+
+        .input-wrapper {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .input-field {
+            padding: 8px 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 200px;
+        }
+
+        /* 日付項目専用のクラス */
+        .input-field.datepicker {
+            width: 150px;
+            background-color: #f0f8ff;
+        }
+
+        /* 通常の入力項目用のクラス */
+        .input-field.text-field {
+            width: 200px;
+        }
+
+        /* カレンダーアイコンのスタイル（JavaScriptで動的に追加される） */
+        .calendar-icon {
+            cursor: pointer;
+            font-size: 24px;
+            color: #555;
+            user-select: none;
+            display: inline-block;
+        }
+
+        .calendar-icon:hover {
+            color: #000;
+        }
+
+        label {
+            display: inline-block;
+            width: 100px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="input-wrapper">
+        <label for="nameInput">名前:</label>
+        <input type="text" id="nameInput" class="input-field text-field" placeholder="名前を入力">
+    </div>
+
+    <div class="input-wrapper">
+        <label for="dateInput">日付:</label>
+        <input type="text" id="dateInput" class="input-field datepicker" placeholder="yyyyMMdd" readonly>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="datepicker.js"></script>
+</body>
+</html>
